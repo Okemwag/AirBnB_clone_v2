@@ -8,10 +8,17 @@ app.url_map.strict_slashes = False
 
 
 @app.route('/')
-def hello_hbnb():
+def display_hello():
     """ Returns string when specified app.route is queried
     """
     return 'Hello HBNB!'
+
+
+@app.route('/hbnb')
+def display_hbnb():
+    """ Returns string when specified app.route is queried
+    """
+    return 'HBNB'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
